@@ -1,0 +1,27 @@
+{
+  "manifest_version": 2,
+  "name": "Perspective Plus",
+  "version": "1.0",
+  "description": "Verify medical content accuracy in YouTube videos",
+  "permissions": [
+    "activeTab",
+    "https://www.youtube.com/*",
+    "https://api-inference.huggingface.co/*"
+  ],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://www.youtube.com/*"],
+      "js": ["content.js"]
+    }
+  ],
+  "browser_action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "48": "icon.png"
+    }
+  }
+}
