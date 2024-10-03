@@ -12,6 +12,9 @@
     "scripts": ["background.js"],
     "persistent": false
   },
+  "web_accessible_resources": [
+  ".env"
+  ],
   "content_scripts": [
     {
       "matches": ["*://www.youtube.com/*"],

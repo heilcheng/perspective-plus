@@ -1,4 +1,5 @@
-const API_KEY = "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";
+require('dotenv').config();
+const API_KEY = process.env.API_KEY;
 
 async function verifyMedicalContent(transcript) {
   console.log("Starting verification");
